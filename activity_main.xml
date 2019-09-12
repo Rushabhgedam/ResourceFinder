@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please Enter URL in the box and press ok Once finished"
+        android:textAlignment="center"
+        android:id="@+id/guidetext"
+        android:textSize="15dp"
+        />
+    <EditText
+        android:id="@+id/edt_getURL"
+        android:layout_margin="15dp"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890://@?."
+        android:inputType="textFilter"
+        android:text="https://"
+        android:layout_below="@+id/guidetext"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_finddata"
+        android:layout_below="@+id/edt_getURL"
+        android:layout_width="wrap_content"
+        android:text="Submit"
+        android:layout_height="wrap_content" />
+    <WebView
+        android:id="@+id/loadData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
+</RelativeLayout>
